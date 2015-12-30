@@ -28,4 +28,4 @@ function test() {
   assert.equal(bitswap(1, 1, 0), 2);
 }
 
-module.exports = test;
+module.exports = {test: true, func: test};

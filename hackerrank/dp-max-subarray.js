@@ -29,4 +29,4 @@ function test() {
   assert.deepEqual(maxSubarray([1, -3, 5, -2, 9, -8, 6]), [2, 4])
 }
 
-module.exports = test;
+module.exports = {test: true, func: test};
