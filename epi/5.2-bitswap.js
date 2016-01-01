@@ -1,5 +1,8 @@
 var assert = require('assert');
 
+// Write a function to swap two bits
+// https://github.com/epibook/epibook.github.io/blob/master/solutions/java/src/main/java/com/epi/SwapBits.java
+
 function setbit(num, i, value) {
   if (value == 1) {
     return num | (1 << i);
