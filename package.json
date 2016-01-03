@@ -1,7 +1,7 @@
 {
   "name": "algorithms",
   "description": "Algorithms solutions",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "test": "node --use_strict --harmony test.js && eslint **/*.js"
@@ -13,6 +13,7 @@
     "mocha": "^2.3.4"
   },
   "dependencies": {
+    "lodash": "^3.10.1",
     "pluralize": "^1.2.1"
   }
 }
