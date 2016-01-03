@@ -5,7 +5,7 @@ var ANSI_RESET = "\u001B[0m";
 var glob = require("glob")
 glob("**/*.js", {ignore: ['node_modules/**', 'test.js']}, function (er, files) {
   var tests = 0;
-  for (file of files) {
+  for (var file of files) {
     var obj = require('./' + file);
     if (obj && obj.test && obj.func) {
       obj.func();
