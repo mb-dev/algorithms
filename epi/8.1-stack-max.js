@@ -1,5 +1,8 @@
 var assert = require('assert');
 
+// Write a stack with a max function. all operations should take O(1)
+// https://github.com/epibook/epibook.github.io/blob/master/solutions/java/src/main/java/com/epi/StackWithMax.java
+
 class StackWithMax {
   constructor(...values) {
     this.stack = [];
