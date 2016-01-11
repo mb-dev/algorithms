@@ -1,4 +1,5 @@
 var assert = require('assert');
+var testing = require('../testing/testing');
 
 // Write a stack with a max function. all operations should take O(1)
 // https://github.com/epibook/epibook.github.io/blob/master/solutions/java/src/main/java/com/epi/StackWithMax.java
@@ -45,5 +46,4 @@ function test() {
   stack.pop();
   assert.equal(stack.max(), 2);
 }
-
-module.exports = {test: true, func: test};
+testing.addTest(test);

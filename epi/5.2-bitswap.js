@@ -1,4 +1,5 @@
 var assert = require('assert');
+var testing = require('../testing/testing');
 
 // Write a function to swap two bits
 // https://github.com/epibook/epibook.github.io/blob/master/solutions/java/src/main/java/com/epi/SwapBits.java
@@ -31,4 +32,4 @@ function test() {
   assert.equal(bitswap(1, 1, 0), 2);
 }
 
-module.exports = {test: true, func: test};
+testing.addTest(test);

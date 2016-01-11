@@ -1,5 +1,6 @@
 var assert = require('assert');
-var Tree = require('./support/tree');
+var testing = require('../testing/testing');
+var Tree = require('../data-structures/tree');
 
 // Write a tree where each Node contains a parent link. Write in order function that uses only O(1) additional space.
 //
@@ -20,5 +21,4 @@ function test() {
   // in progress
 
 }
-
-module.exports = {test: true, func: test};
+testing.addTest(test);

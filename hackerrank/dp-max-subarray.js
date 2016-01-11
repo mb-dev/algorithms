@@ -1,4 +1,5 @@
 var assert = require('assert');
+var testing = require('../testing/testing');
 
 // https://www.hackerrank.com/challenges/maxsubarray
 // Given array of integers, find maximum possible contiguous subarray
@@ -28,5 +29,4 @@ function test() {
   assert.deepEqual(maxSubarray([1, -3, 5, -2, 9, -8, 6, 4]), [2, 7])
   assert.deepEqual(maxSubarray([1, -3, 5, -2, 9, -8, 6]), [2, 4])
 }
-
-module.exports = {test: true, func: test};
+testing.addTest(test);

@@ -1,4 +1,5 @@
 var assert = require('assert');
+var testing = require('../testing/testing');
 
 // Write a function to rearrange elements in the array, smallest, equal, greater than index i.
 // https://github.com/epibook/epibook.github.io/blob/master/solutions/java/src/main/java/com/epi/DutchNationalFlag.java
@@ -32,5 +33,4 @@ function test() {
   assert.deepEqual(rearrange([2, 4, 2, 2, 1, 2], 3), [1, 2, 2, 2, 2, 4]);
   assert.deepEqual(rearrange([2, 4, 2, 2, 1, 2], 3), [1, 2, 2, 2, 2, 4]);
 }
-
-module.exports = {test: true, func: test};
+testing.addTest(test);

@@ -1,4 +1,5 @@
 var assert = require('assert');
+var testing = require('../testing/testing');
 var readInput = require('./helper');
 
 // https://www.hackerrank.com/challenges/pairs
@@ -31,5 +32,4 @@ function test() {
   assert.equal(searchPairs([1, 5, 3, 4, 2], 2), 3);
   assert.equal(fromInput('inputs/search-pairs-1.txt'), 80);
 }
-
-module.exports = {test: true, func: test};
+testing.addTest(test);

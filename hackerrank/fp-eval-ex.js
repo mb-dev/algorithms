@@ -1,4 +1,5 @@
 var assert = require('assert');
+var testing = require('../testing/testing');
 var _ = require('lodash');
 
 // https://www.hackerrank.com/challenges/eval-ex
@@ -20,5 +21,4 @@ function test() {
   assert(Math.abs(e(2) - 7.38) < 0.1, e(2));
   assert(Math.abs(e(5) - 148.41) < 0.2, e(5));
 }
-
-module.exports = {test: true, func: test};
+testing.addTest(test);

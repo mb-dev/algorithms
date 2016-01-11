@@ -1,4 +1,5 @@
 var assert = require('assert');
+var testing = require('../testing/testing');
 
 // Given array of integers, find longest consequtive strickly increasing or decreasing subsequence
 
@@ -51,5 +52,4 @@ function test() {
   assert.equal(lidr([1, 2, 3, 2, 1]), 3);
   assert.equal(lidr([1, 2, 4, 3, 2, 1]), 4);
 }
-
-module.exports = {test: true, func: test};
+testing.addTest(test);

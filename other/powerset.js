@@ -1,4 +1,5 @@
 var assert = require('assert');
+var testing = require('../testing/testing');
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -25,7 +26,7 @@ function generateRandomCheckProperties() {
     var ch;
     // choose a character in the range of a - charAt('a' + length) that was not used already
     do {
-      ch = String.fromCharCode('a'.charCodeAt() + getRandomInt(0, length))
+      ch = String.fromCharCode('a'.charCodeAt() + getRandomInt(0, n));
     } while(arr.indexOf(ch) >= 0);
     arr.push(ch);
   }
@@ -43,5 +44,4 @@ function test() {
     generateRandomCheckProperties();
   }
 }
-
-module.exports = {test: true, func: test};
+testing.addTest(test);
