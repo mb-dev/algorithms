@@ -71,8 +71,6 @@ class Heap {
   }
 }
 
-module.exports = Heap;
-
 function test() {
   var heap = new Heap();
   heap.insert(1);

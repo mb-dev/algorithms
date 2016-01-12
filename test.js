@@ -12,6 +12,7 @@ glob("**/*.js", {ignore: ['node_modules/**', 'test.js']}, function (er, files) {
   for (var test of testing.getTests()) {
     test();
     tests += 1;
+    process.stdout.write(ANSI_GREEN + "." + ANSI_RESET);
   }
-  console.log(ANSI_GREEN +  (tests) + ' ' + pluralize('test', tests) + ' passed' + ANSI_RESET);
+  console.log("\n" + ANSI_GREEN + (tests) + ' ' + pluralize('test', tests) + ' passed' + ANSI_RESET + "\n");
 });
