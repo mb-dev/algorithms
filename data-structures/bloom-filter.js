@@ -11,7 +11,7 @@
 //
 // http://ilyasterin.com/blog/2010/02/implementing-bloom-filter-with-a-murmur-hash-function.html
 // Less Hashing More Performance: http://www.eecs.harvard.edu/~kirsch/pubs/bbbf/esa06.pdf
-// gi(x) = h1(x) + ih2(x) mod m
+// g(i, x) = (h1(x) + i * ih2(x)) mod m
 // m is the number of buckets in the bloom filter, h1 and h2 are the two calculated hashes respectively, and i will range from 0 up to k – 1 where k is the number of hashes we want to generate.
 //
 // Also see:
