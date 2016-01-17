@@ -21,8 +21,17 @@ class BitSet {
 
 function test() {
   var bitset = new BitSet();
+  assert.equal(bitset.get(1), false);
+  assert.equal(bitset.get(31), false);
   bitset.set(1);
-  assert.equal(bitset.get(1), 1);
+  bitset.set(31);
+  assert.equal(bitset.get(1), true);
+  assert.equal(bitset.get(31), true);
+  for (var i=0; i < 40; ++i) {
+    if (i != 1 && i != 31) {
+      assert.equal(bitset.get(i), false, i);
+    }
+  }
 }
 
 testing.addTest(test);
