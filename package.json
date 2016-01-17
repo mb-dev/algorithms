@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "lodash": "^3.10.1",
+    "murmurhash": "0.0.2",
     "pluralize": "^1.2.1"
   }
 }
