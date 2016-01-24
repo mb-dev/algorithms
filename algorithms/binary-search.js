@@ -1,6 +1,8 @@
 var assert = require('assert');
 var testing = require('../testing/testing');
 
+// find an element in a sorted array
+
 function binarySearch(arr, val) {
   var l = 0, u = arr.length - 1;
   while (l <= u) {
