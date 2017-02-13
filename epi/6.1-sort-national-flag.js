@@ -14,6 +14,8 @@ function rearrange(arr, i) {
   var pivot = arr[i];
   var left = 0, equal = 0, right = arr.length - 1;
 
+  // equal represents the index where we verified the item is equal or less than pivot
+  // left represents the index where we verified the item to be less than pivot
   while(equal <= right) {
     if (arr[equal] < pivot) {
       swap(arr, left++, equal++);

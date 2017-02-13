@@ -5,6 +5,7 @@ var testing = require('../testing/testing');
 // for now only max heap is supported
 class Heap {
   constructor(max) {
+    // is this a max heap or a min heap?
     max = max || true;
     this.max = max;
     this.arr = [];

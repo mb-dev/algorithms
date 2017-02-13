@@ -3,7 +3,7 @@ var testing = require('../testing/testing');
 var List = require('../data-structures/list');
 
 // Write a function to merge two sorted linked list
-// https://github.com/epibook/epibook.github.io/blob/master/solutions/java/src/main/java/com/epi/MergeSortedLists.java
+// https://github.com/epibook/epibook.github.io/blob/master/static/solutions/java/src/main/java/com/epi/MergeSortedLists.java
 
 function mergeSortedLists(L, F) {
   var result = new List();

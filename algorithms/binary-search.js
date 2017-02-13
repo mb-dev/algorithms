@@ -4,15 +4,15 @@ var testing = require('../testing/testing');
 // find an element in a sorted array
 
 function binarySearch(arr, val) {
-  var l = 0, u = arr.length - 1;
-  while (l <= u) {
-    var m = Math.floor((l+u)/2);
+  let l = 0, r = arr.length - 1;
+  while (l <= r) {
+    const m = Math.floor((l+r)/2);
     if (arr[m] < val) {
       l = m + 1;
     } else if (arr[m] === val) {
       return m;
     } else {
-      u = m - 1;
+      r = m - 1;
     }
   }
   return -1;
