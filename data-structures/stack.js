@@ -11,6 +11,11 @@ class Stack {
   push(value) {
     if (value === null)
       return;
-    this.stack.pop(value);
+    this.stack.push(value);
+  }
+  length() {
+    return this.stack.length;
   }
 }
+
+module.exports = Stack;

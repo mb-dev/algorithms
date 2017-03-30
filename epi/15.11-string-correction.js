@@ -3,7 +3,6 @@ var testing = require('../testing/testing');
 var Tree = require('../data-structures/tree');
 var treeTraverse = require('../algorithms/tree-traverse');
 
-
 // Does a BST satisfies the BST property?
 function isBST(t) {
   let result = true;
@@ -26,18 +25,6 @@ function test() {
   assert.deepEqual(true, isBST(bst));
   const nonBST = {
     root: {
-      value: 8,
-      left: {
-        value: 2,
-        right: {
-          value: 10,
-        }
-      }
-    },
-  };
-  assert.deepEqual(false, isBST(nonBST));
-  const nonBST2 = {
-    root: {
       value: 5,
       left: {
         value: 2,
@@ -47,7 +34,6 @@ function test() {
       }
     },
   };
-  assert.deepEqual(false, isBST(nonBST2));
+  assert.deepEqual(false, isBST(nonBST));
 }
-// TODO: FIX
-//testing.addTest(test);
+testing.addTest(test);

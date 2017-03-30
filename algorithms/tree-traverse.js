@@ -1,6 +1,7 @@
 var assert = require('assert');
 var testing = require('../testing/testing');
 var Tree = require('../data-structures/tree');
+const Stack = require('../data-structures/stack');
 
 function dfsInOrder(tree, nodeKeyFunc) {
     if (tree.root === null) {
@@ -37,21 +38,17 @@ function inOrderWithRecursion(node, cb) {
   }
 }
 
-function inOrderWithQueue(node, cb) {
+function inOrderWithStack(node, cb) {
   const stack = new Stack();
-  const result = [];
   let current = node;
-  while (current && stack.length > 0) {
-    if (current) {
-      stack.add(current);
-    }
-    if (current && current.left) { 
+  while (current || stack.length() > 0) {
+    while (current) {
+      stack.push(current);
       current = current.left;
-      continue;
     }
-    current = stack.pop();
-    result.push(current);
-    if (current.right) {
+    if (stack.length() > 0) {
+      current = stack.pop();
+      cb(current);
       current = current.right;
     }
   }
@@ -60,7 +57,7 @@ function inOrderWithQueue(node, cb) {
 module.exports = {
   dfsInOrder,
   inOrderWithRecursion,
-  inOrderWithQueue,
+  inOrderWithStack,
 }
 
 function test() {
@@ -68,8 +65,12 @@ function test() {
   for (const num of [5, 2, 8, 1, 3]) {
     tree.add(num);
   }
-  const results = [];
+  let results = [];
   inOrderWithRecursion(tree.root, (node) => results.push(node.value));
+  assert.deepEqual([1, 2, 3, 5, 8], results);
+  results = [];
+  console.log("---");
+  inOrderWithStack(tree.root, (node) => results.push(node.value));
   assert.deepEqual([1, 2, 3, 5, 8], results);
 }
 testing.addTest(test);
